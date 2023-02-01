@@ -1,3 +1,28 @@
 body {
-background-color: hotpink;
+/* fallback for old browsers */
+background-color: #84fab0;
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+p {
+text-indent: 250px;
+}
+
+h1 {
+color: #ffc;
+background-color: #900;
+font-size: 2em;
+margin: 0;
+margin-bottom: 7px;
+padding: 4px;
+font-style: italic;
+text-align: center;
+letter-spacing: 0.5em;
+border-bottom-style: solid;
+border-bottom-width: 0.5em;
+border-bottom-color: #c00;
 }
