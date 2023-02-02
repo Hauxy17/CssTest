@@ -1,12 +1,16 @@
 package com.example.CssTest;
 
+//
 //import javax.validation.constraints.Email;
 //import javax.validation.constraints.Size;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+
+
+import jakarta.persistence.*;
 
 @Entity
 public class User {
@@ -16,19 +20,24 @@ public class User {
     private Long id;
 
 //    @Size(min = 1)
+    @Column(name="FIRST_NAME")
     private String firstName;
 
 //    @Size(min = 1)
+    @Column(name="LAST_NAME")
     private String lastName;
 
 //    @Email
+    @Column(name="EMAIL_ADDRESS")
     private String email;
 
-//    @Size(min = 8)
-    private String password;
-
 //    @Size(min = 4, max = 30)
+    @Column(name="USER_NAME")
     private String username;
+
+    //    @Size(min = 8)
+//    @Column(name="PASSWORD") -- in Book it's not on password
+    private String password;
 
     public User() {
     }
@@ -39,6 +48,14 @@ public class User {
         this.email = email;
         this.username = username;
         this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {

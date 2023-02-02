@@ -4,8 +4,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <head>
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8"></meta>
-    <title>Users</title>
+    <meta charset="UTF-8">
+    <title>Create Users</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-light justify-content-center">
@@ -27,23 +27,16 @@
 
 <h1>Create User</h1>
 
-<form action="/createUser" th:object="${user}" method="post">
-    <p>First name: <input type="text"/></p>
-    <p>Last name:  <input type="text"></p>
-    <p>Email:      <input type="email"></p>
-    <p>Username:   <input type="text"></p>
-    <p>Password:   <input type="password"></p>
-    <p><input type="submit" value="Submit"></p>
+<form th:object="${user}" action="/createUser"  method="post">
+    First name: <input type="text" th:field="*{firstName}"/>
+    Last name:  <input type="text" th:field="*{lastName}">
+    Email:      <input type="email" th:field="*{email}">
+    Username:   <input type="text" th:field="*{username}">
+    Password:   <input type="password" th:field="*{password}">
+    <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
+    <input type="submit" value="Submit">
 </form>
 <br/>
-<hr><a href="/mainPage">Back to login page</a></h2>
-<!--  <tr th:each="user : ${users}">
-      <th th:text="${user.firstName}"></th>
-      <th th:text="${user.lastName}"></th>
-      <th th:text="${user.email}"></th>
-      <th th:text="${user.username}"></th>
-      <th th:text="${user.password}"></th>
-  </tr> -->
-
+<hr><a href="/">Back to login page</a></h2>
 </body>
 </html>

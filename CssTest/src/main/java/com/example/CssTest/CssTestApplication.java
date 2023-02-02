@@ -5,13 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
-//@ComponentScan(basePackages={"com.nervy.dialer"})
-//@EntityScan(basePackages="domain")
-
 @SpringBootApplication
 public class CssTestApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CssTestApplication.class, args);
 	}
 
