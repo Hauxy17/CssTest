@@ -12,7 +12,7 @@ package com.example.CssTest;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "USERPROFILE")
 public class User {
 
     @Id
@@ -36,7 +36,8 @@ public class User {
     private String username;
 
     //    @Size(min = 8)
-//    @Column(name="PASSWORD") -- in Book it's not on password
+    @Column
+    //in Book it's not on password
     private String password;
 
     public User() {

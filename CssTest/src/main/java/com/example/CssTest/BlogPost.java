@@ -2,7 +2,7 @@ package com.example.CssTest;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "BLOGPOST")
 public class BlogPost {
 
     @Id

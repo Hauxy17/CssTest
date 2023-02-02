@@ -1,7 +1,0 @@
-INSERT INTO USERS (ID, FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, USER_NAME, PASSWORD) VALUES ('Sion', 'Antonisen', 'sion@AW.com', 'Johnny Loeve', '123');
-INSERT INTO USERS (ID, FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, USER_NAME, PASSWORD) VALUES ('Ella', 'Skov', 'ella@AW.com', 'Hauxy', 'abc');
-INSERT INTO USERS (ID, FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, USER_NAME, PASSWORD) VALUES ('Line', 'Christiansen', 'line@AW.com', 'line-t-c', '321');
-
-INSERT INTO BLOGPOST (ID, HEADLINE, TEXT) VALUES('Get through your first week', 'If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better.' );
-INSERT INTO BLOGPOST (ID, HEADLINE, TEXT) VALUES('Get through your second week', 'If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better.' );
-INSERT INTO BLOGPOST (ID, HEADLINE, TEXT) VALUES('Get through your third week', 'If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there.' );
