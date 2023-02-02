@@ -24,8 +24,10 @@
         </ul>
     </div>
 </nav>
+<h1>Loose your snus</h1>
+<div class="bodyText">
 
-<h1> Write your totally awesome blogpost here!</h1>
+<h2> Write your totally awesome blogpost here!</h2>
 <br/>
 
 <form th:object="${blogpost}" action="/saveBlogpost" method="POST">
@@ -37,6 +39,6 @@
     <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
     <input type="submit" value="Save blogpost">
 </form>
-
+</div>
 </body>
 </html>

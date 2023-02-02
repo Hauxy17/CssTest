@@ -1,28 +1,48 @@
 body {
 /* fallback for old browsers */
-background-color: #84fab0;
+background-color: #62adcf;
 /* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+background: -webkit-linear-gradient(to right, rgb(190 203 205), rgb(27 137 191));
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+background: linear-gradient(to right, rgb(193 213 220), rgb(14 129 184))
+
 }
 
+.bodyText {
+
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  display: block;
+  text-align: center;
+}
 
 p {
-text-indent: 250px;
+  margin-left: 50px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+input {
+  margin-left: 50px;
+  text-align: right;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 h1 {
-color: #ffc;
-background-color: #900;
+color: #efefe0;
+background-color: #1e1c1d;
 font-size: 2em;
 margin: 0;
-margin-bottom: 7px;
-padding: 4px;
-font-style: italic;
+margin-bottom: 12px;
+padding: 6px;
+font-style: font-family: 'Rale way', sans-serif;
 text-align: center;
 letter-spacing: 0.5em;
-border-bottom-style: solid;
-border-bottom-width: 0.5em;
-border-bottom-color: #c00;
 }

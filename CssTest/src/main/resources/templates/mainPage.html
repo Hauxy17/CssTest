@@ -26,11 +26,13 @@
 <h1>Loose your snus</h1>
 <br/>
 
+<div class="bodyText">
+
 <h2>Login here</h2>
 <form th:object="${user}" th:action="@{/}" method="post">
 
-  Username: <input type="text" name="username" th:field="*{username}">
-  Password: <input type="password" name="password" th:field="*{password}">
+  Username: <input type="text" name="username" th:field="*{username}"/><br/>
+  Password: <input type="password" name="password" th:field="*{password}"/>
   <div th:if="${param.error}">
     <i>* invalid username and/or password.</i>
   </div>
@@ -39,7 +41,7 @@
 </form>
 
 <br/>
-<h2><a href="/createUser">Create new user</a></h2>
-
+<h4><a href="/createUser">Create new user</a></h4>
+</div>
 </body>
 </html>

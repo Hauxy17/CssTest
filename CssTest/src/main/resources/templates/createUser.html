@@ -24,19 +24,22 @@
         </ul>
     </div>
 </nav>
+<h1>Loose your snus</h1>
+<div class="bodyText">
 
-<h1>Create User </h1>
+<h2>Create User </h2>
 
 <form th:object="${userProfile}" action="/save"  method="post">
-    <p>First name: <input type="text" field="*{firstName}" name="firstName"/></p>
-    <p>Last name:  <input type="text" field="*{lastName}" name="lastName"></p>
-    <p>Email:      <input type="email" field="*{email}" name="email"></p>
-    <p>Username:   <input type="text" field="*{userName}" name="userName"></p>
-    <p>Password:   <input type="password" field="*{password}" name="password"></p>
+    First name: <input type="text" field="*{firstName}" name="firstName"/><br/>
+    Last name:  <input type="text" field="*{lastName}" name="lastName"><br/>
+    Email:      <input type="email" field="*{email}" name="email"><br/>
+    Username:   <input type="text" field="*{userName}" name="userName"><br/>
+    Password:   <input type="password" field="*{password}" name="password"><br/>
     <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
     <input type="submit" value="Submit">
 </form>
 <br/>
 <hr><a href="/">Back to login page</a></h2>
+</div>
 </body>
 </html>
