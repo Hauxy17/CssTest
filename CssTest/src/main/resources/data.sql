@@ -6,6 +6,6 @@ VALUES
 
 INSERT INTO BLOGPOST (HEADLINE, TEXT)
 VALUES
-('Get through your first week', 'If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better.' ),
-('Get through your second week', 'If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better.' ),
-('Get through your third week', 'If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there.' );
+('Get through your first week', 'If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better. If you make it through the first week, it will get better.'),
+('Get through your second week', 'If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better. If you make it through the second week, it will get better.'),
+('Get through your third week', 'If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there. If you make it through the third week, you are almost there.');

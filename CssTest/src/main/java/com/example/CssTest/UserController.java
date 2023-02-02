@@ -17,7 +17,8 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public String mainPage () {
+    public String mainPage (Model model) {
+//        model.addAttribute("user", User);
         return "mainPage";
     }
 
@@ -32,6 +33,7 @@ public class UserController {
         userRepo.save(user);
         return "redirect:/";
     }
+
 
     @GetMapping("/error")
     public String error(){

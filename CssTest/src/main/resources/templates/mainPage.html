@@ -25,19 +25,17 @@
 
 <h1>Loose your snus</h1>
 <br/>
+
 <h2>Login here</h2>
-<form th:action="@{/login}" method="post">
+<form th:object="${user}" th:action="@{/helloWorld}" method="post">
 
-  <p>Username:</p>
-  <p><input type="text" name="username"></p>
-
-  <p>Password: </p>
-  <p><input type="password" name="password"></p>
+<!--  Username: <input type="text" name="username" th:field="*{username}">-->
+<!--  Password: <input type="password" name="password" th:field="*{password}">-->
   <div th:if="${param.error}">
     <i>* invalid username and/or password.</i>
   </div>
   <br>
-  <p><input type="submit" value="Login"></p>
+  <input type="submit" value="Login">
 </form>
 
 <br/>

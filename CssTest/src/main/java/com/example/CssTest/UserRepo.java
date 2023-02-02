@@ -8,8 +8,7 @@ import java.util.List;
 //@Service
 public interface UserRepo extends CrudRepository<User, Long> {
 
-//    List<Book> findAllByOrderByAuthorDesc();
-//    List<Book> findAllByOrderByAuthor();
+    List<User> findAllByOrderByFirstNameDesc();
 
     List<User> findAllByOrderByFirstName();
 
