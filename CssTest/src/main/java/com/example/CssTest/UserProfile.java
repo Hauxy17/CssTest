@@ -13,7 +13,7 @@ package com.example.CssTest;
 import jakarta.persistence.*;
 
 @Entity(name = "USERPROFILE")
-public class User {
+public class UserProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,9 +40,9 @@ public class User {
     //in Book it's not on password
     private String password;
 
-    public User() {
+    public UserProfile() {
     }
-    public User(Long id, String firstName, String lastName, String email, String username, String password) {
+    public UserProfile(Long id, String firstName, String lastName, String email, String username, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

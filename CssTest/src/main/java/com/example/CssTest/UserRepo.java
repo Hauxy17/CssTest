@@ -1,15 +1,21 @@
 package com.example.CssTest;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 //import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 //@Service
-public interface UserRepo extends CrudRepository<User, Long> {
+public interface UserRepo extends CrudRepository<UserProfile, Long> {
 
-    List<User> findAllByOrderByFirstNameDesc();
+    @Query(value = "SELECT * FROM USERPROFILE WHERE USER_NAME = ?1 AND PASSWORD = ?2", nativeQuery = true)
+    public UserProfile login(
+            String username,
+            String password);
 
-    List<User> findAllByOrderByFirstName();
+//    List<User> findAllByOrderByFirstNameDesc();
+
+//    List<User> findAllByOrderByFirstName();
 
 }

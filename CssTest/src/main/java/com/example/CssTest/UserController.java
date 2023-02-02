@@ -17,20 +17,27 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public String mainPage (Model model) {
-//        model.addAttribute("user", User);
+    public String mainPage (Model model, @ModelAttribute UserProfile userProfile) {
+//        userRepo.login(username, password);
+        model.addAttribute("user", userProfile);
         return "mainPage";
+    }
+
+    @PostMapping ("/")
+    public String mainPage (Model model, @RequestParam String username, @RequestParam String password){
+        userRepo.login(username, password);
+        return "redirect:/helloWorld";
     }
 
     @GetMapping("/createUser")
     public String create(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new UserProfile());
         return "createUser";
     }
 
     @PostMapping("/createUser")
-    public String createUser (@ModelAttribute User user) {
-        userRepo.save(user);
+    public String createUser (@ModelAttribute UserProfile userProfile) {
+        userRepo.save(userProfile);
         return "redirect:/";
     }
 
