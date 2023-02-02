@@ -5,11 +5,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class UserController {
 
     @Autowired
     UserRepo userRepo;
+
+    @Autowired
+    BlogRepo blogRepo;
 
     @GetMapping("/helloWorld")
     public String helloWorld () {
@@ -26,7 +32,7 @@ public class UserController {
     @PostMapping ("/")
     public String mainPage (Model model, @RequestParam String username, @RequestParam String password){
         userRepo.login(username, password);
-        return "redirect:/helloWorld";
+        return "redirect:/forum";
     }
 
     @GetMapping("/createUser")
@@ -47,7 +53,11 @@ public class UserController {
         return "error";
     }
 
-
-
+    @GetMapping("/forum")
+    public String forum (Model model){
+        List<BlogPost> blog = new ArrayList<>();
+        model.addAttribute("blogPost",blog);
+        return "forum";
+    }
 
 }
