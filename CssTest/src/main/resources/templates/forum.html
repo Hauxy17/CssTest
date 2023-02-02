@@ -35,8 +35,10 @@
 
 
     <tr th:each="blogposts : ${blogpost}">
-        <th><a th:href="'/forum/' + ${currentPage} + '/' + ${blogposts.id}" th:text="${blogposts.headline}"></a></th>
+        <th><a th:href="'/forum/' + ${blogposts.id}" th:text="${blogposts.headline}"></a></th>
         <th th:text="${blogposts.text}"></th>
+        <br/>
+        <br/>
     </tr>
 
 

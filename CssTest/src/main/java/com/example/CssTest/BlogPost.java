@@ -9,10 +9,10 @@ public class BlogPost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="HEADLINERS")
+    @Column(name="HEADLINE")
     private String headline;
 
-    @Column(name="TEXTERS")
+    @Column(name="TEXT")
     private String text;
 
 //    @Column(name="FIRST_NAME")

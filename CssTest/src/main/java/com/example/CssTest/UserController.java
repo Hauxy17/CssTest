@@ -32,7 +32,7 @@ public class UserController {
     @PostMapping ("/")
     public String mainPage (Model model, @RequestParam String username, @RequestParam String password){
         userRepo.login(username, password);
-        return "redirect:/forum";
+        return "redirect:/helloWorld";
     }
 
     @GetMapping("/createUser")
@@ -55,8 +55,8 @@ public class UserController {
 
     @GetMapping("/forum")
     public String forum (Model model){
-        List<BlogPost> blog = new ArrayList<>();
-        model.addAttribute("blogPost",blog);
+        List<BlogPost> blog = (List)blogRepo.findAll();
+        model.addAttribute("blogpost",blog);
         return "forum";
     }
 
