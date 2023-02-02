@@ -32,7 +32,7 @@ public class UserController {
     @PostMapping ("/")
     public String mainPage (Model model, @RequestParam String username, @RequestParam String password){
         userRepo.login(username, password);
-        return "redirect:/helloWorld";
+        return "redirect:/forum";
     }
 
     @GetMapping("/createUser")
@@ -59,5 +59,24 @@ public class UserController {
         model.addAttribute("blogpost",blog);
         return "forum";
     }
+
+    @GetMapping("/newblogpost")
+    public String createBlogpost (Model model){
+        model.addAttribute("blogpost", new BlogPost());
+        return "blogPost";
+    }
+
+    @PostMapping("/saveBlogpost")
+    public String createBlogpost (@ModelAttribute BlogPost blogPost) {
+        blogRepo.save(blogPost);
+        return "redirect:/forum";
+    }
+
+//    @GetMapping("/forum/{blogposts.id}")
+//    public String viewBlogpost (Model model, @PathVariable Long id){
+//        BlogPost blogPost = blogRepo.findById(id).orElse(null);
+//        model.addAttribute("blogpost",blogPost);
+//        return "forum";
+//    }
 
 }

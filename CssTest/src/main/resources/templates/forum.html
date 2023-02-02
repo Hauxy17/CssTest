@@ -30,12 +30,13 @@
 <br/>
 
 <h1> Welcome to the forum</h1>
-<a href="/blogpost">Create a blogpost here!</a>
+<a href="/newblogpost">Create a blogpost here!</a>
 <br/><br/>
 
 
     <tr th:each="blogposts : ${blogpost}">
         <th><a th:href="'/forum/' + ${blogposts.id}" th:text="${blogposts.headline}"></a></th>
+        <br/>
         <th th:text="${blogposts.text}"></th>
         <br/>
         <br/>

@@ -12,8 +12,8 @@ public class BlogPost {
     @Column(name="HEADLINE")
     private String headline;
 
-    @Column(name="TEXT")
-    private String text;
+    @Column(name="BLOGPOSTTEXT")
+    private String blogposttext;
 
 //    @Column(name="FIRST_NAME")
 //    private String author;
@@ -21,10 +21,10 @@ public class BlogPost {
     public BlogPost(){
     }
 
-    public BlogPost(Long id, String headline, String text) {
+    public BlogPost(Long id, String headline, String blogposttext) {
         this.id = id;
         this.headline = headline;
-        this.text = text;
+        this.blogposttext = blogposttext;
     }
 
     public Long getId() {
@@ -44,10 +44,10 @@ public class BlogPost {
     }
 
     public String getText() {
-        return text;
+        return blogposttext;
     }
 
     public void setText(String text) {
-        this.text = text;
+        this.blogposttext = blogposttext;
     }
 }

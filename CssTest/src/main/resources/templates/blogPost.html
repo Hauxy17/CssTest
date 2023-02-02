@@ -28,32 +28,15 @@
 <h1> Write your totally awesome blogpost here!</h1>
 <br/>
 
-<form th:object="${BlogPost}" action="/createBlogpost" method="POST">
-    Headline: <input type="text" th:field="*{headline}"/>
-    <br/>
-    Blogpost: <input type="text" th:field="*{text}"/>
-    <br/>
-    <textarea rows="10" cols="20" placeholder="Write your blogpost here"></textarea>
-    <br/>
-    Author:
-    <br/>
-    <input type="text" placeholder="What is your name?" th:field="*{name}">
+<form th:object="${blogpost}" action="/saveBlogpost" method="POST">
+    <p>Headline: <input type="text" field="*{headline}" name="headline"/></p>
+    <p>Blogpost: <input type="text" field="*{blogposttext}" name="blogposttext"/></p>
+<!--    <p><textarea type="text" field="*{text}" name="blogpost" rows="10" cols="20" placeholder="Write your blogpost here"></textarea></p>-->
+<!--    <p>Author: <input type="text" placeholder="What is your name?" th:field="*{name}"> </p>-->
 <!--    Der mangler pt name i Blogpost class, samt sql.-->
-    <br/>
     <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
     <input type="submit" value="Save blogpost">
 </form>
 
-<!--<form th:object="${BlogPost}" action="/createBlogpost" method="POST">-->
-<!--    Blogpost:-->
-<!--    <br/>-->
-<!--    <textarea rows="10" cols="20" placeholder="Write your blogpost here"></textarea>-->
-<!--    <br/>-->
-<!--    Author:-->
-<!--    <br/>-->
-<!--    <input type="text" placeholder="What is your name?">-->
-<!--    <br/>-->
-<!--    <input type="submit" value="Save blogpost">-->
-<!--</form>-->
 </body>
 </html>
