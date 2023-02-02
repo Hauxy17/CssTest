@@ -31,11 +31,11 @@ public class UserController {
 
     @GetMapping("/createUser")
     public String create(Model model) {
-        model.addAttribute("user", new UserProfile());
+        model.addAttribute("userProfile", new UserProfile());
         return "createUser";
     }
 
-    @PostMapping("/createUser")
+    @PostMapping("/save")
     public String createUser (@ModelAttribute UserProfile userProfile) {
         userRepo.save(userProfile);
         return "redirect:/";
@@ -46,6 +46,8 @@ public class UserController {
     public String error(){
         return "error";
     }
+
+
 
 
 }
