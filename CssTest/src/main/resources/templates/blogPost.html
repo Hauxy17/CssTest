@@ -13,10 +13,7 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/">Login page</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blogPost">BlogPost</a>
+                <a class="nav-link" href="/">Log out</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="forum">Forum</a>
@@ -31,12 +28,15 @@
 <br/>
 
 <form th:object="${blogpost}" action="/saveBlogpost" method="POST">
-    <p>Headline: <input type="text" field="*{headline}" name="headline"/></p>
-    <p>Blogpost: <input type="text" field="*{blogposttext}" name="blogposttext"/></p>
-<!--    <p><textarea type="text" field="*{text}" name="blogpost" rows="10" cols="20" placeholder="Write your blogpost here"></textarea></p>-->
+    Headline:
+    <br/><input type="text" field="*{headline}" name="headline"/><br/><br/>
+    Blogpost:
+<!--    <input type="text" field="*{blogposttext}" name="blogposttext" placeholder="Write your blogpost here"/><br/>-->
+    <br/><textarea type="text" field="*{blogposttext}" name="blogposttext" rows="10" cols="50" placeholder="Write your blogpost here"></textarea>
 <!--    <p>Author: <input type="text" placeholder="What is your name?" th:field="*{name}"> </p>-->
 <!--    Der mangler pt name i Blogpost class, samt sql.-->
     <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
+    <br/>
     <input type="submit" value="Save blogpost">
 </form>
 </div>
