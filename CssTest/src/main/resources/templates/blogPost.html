@@ -31,10 +31,7 @@
     Headline:
     <br/><input type="text" field="*{headline}" name="headline"/><br/><br/>
     Blogpost:
-<!--    <input type="text" field="*{blogposttext}" name="blogposttext" placeholder="Write your blogpost here"/><br/>-->
     <br/><textarea type="text" field="*{blogposttext}" name="blogposttext" rows="10" cols="50" placeholder="Write your blogpost here"></textarea>
-<!--    <p>Author: <input type="text" placeholder="What is your name?" th:field="*{name}"> </p>-->
-<!--    Der mangler pt name i Blogpost class, samt sql.-->
     <input th:if="${id != null}" type="hidden" th:field="*{id}"/>
     <br/>
     <input type="submit" value="Save blogpost">

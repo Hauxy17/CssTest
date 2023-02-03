@@ -15,9 +15,6 @@ public class BlogPost {
     @Column(name="BLOGPOSTTEXT")
     private String blogposttext;
 
-//    @Column(name="FIRST_NAME")
-//    private String author;
-
     public BlogPost(){
     }
 

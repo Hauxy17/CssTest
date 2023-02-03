@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,14 +16,8 @@ public class UserController {
     @Autowired
     BlogRepo blogRepo;
 
-    @GetMapping("/helloWorld")
-    public String helloWorld () {
-        return "helloWorld";
-    }
-
     @GetMapping("/")
     public String mainPage (Model model, @ModelAttribute UserProfile userProfile) {
-//        userRepo.login(username, password);
         model.addAttribute("user", userProfile);
         return "mainPage";
     }
@@ -50,7 +42,6 @@ public class UserController {
         userRepo.save(userProfile);
         return "redirect:/";
     }
-
 
     @GetMapping("/error")
     public String error(){
@@ -77,12 +68,4 @@ public class UserController {
         blogRepo.save(blogPost);
         return "redirect:/forum";
     }
-
-//    @GetMapping("/forum/{blogposts.id}")
-//    public String viewBlogpost (Model model, @PathVariable Long id){
-//        BlogPost blogPost = blogRepo.findById(id).orElse(null);
-//        model.addAttribute("blogpost",blogPost);
-//        return "forum";
-//    }
-
 }

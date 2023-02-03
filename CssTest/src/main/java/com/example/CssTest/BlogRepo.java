@@ -7,4 +7,6 @@ import java.util.List;
 public interface BlogRepo extends CrudRepository<BlogPost, Long> {
 
     List<BlogPost> findAllByOrderByIdDesc();
+
+
 }

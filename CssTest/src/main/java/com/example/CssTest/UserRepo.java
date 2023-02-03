@@ -21,8 +21,5 @@ public interface UserRepo extends CrudRepository<UserProfile, Long> {
             String username,
             String password);
 
-    //    List<User> findAllByOrderByFirstNameDesc();
-
-//    List<User> findAllByOrderByFirstName();
 
 }

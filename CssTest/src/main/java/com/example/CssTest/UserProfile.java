@@ -1,16 +1,8 @@
 package com.example.CssTest;
 
-//
-//import javax.validation.constraints.Email;
-//import javax.validation.constraints.Size;
-
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-
-
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name = "USERPROFILE")
 public class UserProfile {
@@ -19,23 +11,18 @@ public class UserProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Size(min = 1)
     @Column(name="FIRST_NAME")
     private String firstName;
 
-//    @Size(min = 1)
     @Column(name="LAST_NAME")
     private String lastName;
 
-//    @Email
     @Column(name="EMAIL_ADDRESS")
     private String email;
 
-//    @Size(min = 4, max = 30)
     @Column(name="USER_NAME")
     private String username;
 
-    //    @Size(min = 8)
     @Column
     //in Book it's not on password
     private String password;
