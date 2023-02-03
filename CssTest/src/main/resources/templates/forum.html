@@ -25,11 +25,13 @@
 <h1>Loose your snus</h1>
 <div class="bodyText">
 
+
 <h2> Welcome to the forum</h2>
-<a href="/newblogpost">Create a blogpost here!</a>
+    <a href="/newblogpost"> <button type="button" alt="Create a new blogpost">Create a blogpost here!</button></a>
+<!-- <a href="/newblogpost">Create a blogpost here!</a> -->
 <br/><br/>
 
-
+<div class="blogPost">
     <tr th:each="blogposts : ${blogpost}">
         <th><a th:href="'/forum/' + ${blogposts.id}" th:text="${blogposts.headline}"></a></th>
         <br/>
@@ -37,7 +39,7 @@
         <br/>
         <br/>
     </tr>
-
+</div>
 
 <!--<div class="row">-->
 <!--    <div class="leftcolumn">-->
