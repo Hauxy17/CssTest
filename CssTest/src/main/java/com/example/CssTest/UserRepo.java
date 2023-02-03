@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 //@Service
 public interface UserRepo extends CrudRepository<UserProfile, Long> {
 
-    @Query(value = "SELECT * FROM USERPROFILE WHERE USER_NAME = ?1 AND PASSWORD = ?2", nativeQuery = true)
+    @Query (value ="SELECT * FROM USERPROFILE WHERE USER_NAME = ?1 AND PASSWORD = ?2", nativeQuery = true)
     public UserProfile login(
             String username,
             String password);

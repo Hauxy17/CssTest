@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 public class BlogPost {
 
     @Id
+    @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

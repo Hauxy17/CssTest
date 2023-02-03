@@ -16,6 +16,7 @@ import jakarta.persistence.*;
 public class UserProfile {
 
     @Id
+    @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
