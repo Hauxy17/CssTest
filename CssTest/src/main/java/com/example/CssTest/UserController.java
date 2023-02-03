@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class UserController {
@@ -31,7 +32,10 @@ public class UserController {
 
     @PostMapping ("/")
     public String mainPage (Model model, @RequestParam String username, @RequestParam String password){
-        userRepo.login(username, password);
+        Optional<UserProfile> up = userRepo.findByUsernameAndPassword(username, password);
+        if(up.isEmpty()){
+            return "redirect:/";
+        }
         return "redirect:/forum";
     }
 
