@@ -43,11 +43,11 @@ public class BlogPost {
         this.headline = headline;
     }
 
-    public String getText() {
+    public String getBlogposttext() {
         return blogposttext;
     }
 
-    public void setText(String text) {
+    public void setBlogposttext(String blogposttext) {
         this.blogposttext = blogposttext;
     }
 }

@@ -72,6 +72,8 @@ public class UserController {
 
     @PostMapping("/saveBlogpost")
     public String createBlogpost (@ModelAttribute BlogPost blogPost) {
+        System.out.println(blogPost.getHeadline());
+        System.out.println(blogPost.getBlogposttext());
         blogRepo.save(blogPost);
         return "redirect:/forum";
     }
